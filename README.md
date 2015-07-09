@@ -3,7 +3,7 @@ Smart Builder Usage Guide
 
 Introduction
 ------------
-
+Sorry , the extension still under development , visit me next week
 
 Getting Started
 ---------------
