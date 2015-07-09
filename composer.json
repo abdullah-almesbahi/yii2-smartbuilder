@@ -1,0 +1,42 @@
+{
+	"name" : "cadr-sa/yii2-smartbuilder",
+	"description" : "Smart Builder (CRUD + Form Builder + Workflow) for Yii2",
+	"keywords" : [
+		"yii2",
+		"workflow",
+		"builder"
+	],
+	"homepage" : "http://www.yiiframework.com/",
+	"type" : "yii2-extension",
+	"license" : "BSD-3-Clause",
+	"support" : {
+		"issues" : "https://github.com/cadr-sa/yii2-smartbuilder/issues",
+		"source" : "https://github.com/cadr-sa/yii2-smartbuilder",
+		"email" : "abdullah@cadr.sa"
+	},
+	"minimum-stability" : "stable",
+	"require" : {
+		"php" : ">=5.4.0",
+		"yiisoft/yii2" : "*"
+	},
+	"require-dev" : {
+		"codeception/codeception" : "2.0.9",
+		"codeception/specify" : "*",
+		"codeception/verify" : "*",
+		"yiisoft/yii2-codeception" : "*"
+	},
+	"config" : {
+		"process-timeout" : 1800
+	},
+	"autoload" : {
+		"psr-4" : {
+			"cadr-sa\\workflow\\" : "/"
+		}
+	},
+	"authors" : [{
+			"name" : "Abdullah",
+			"email" : "abdullah@cadr.sa",
+			"homepage" : "https://github.com/cadr-sa/yii2-smartbuilder"
+		}
+	]
+}
