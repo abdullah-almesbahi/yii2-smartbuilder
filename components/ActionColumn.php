@@ -103,13 +103,13 @@ class ActionColumn extends Column
             $buttonText = isset($button['text']) ? ' ' . $button['text'] : '';
             $_key = (isset($button['redirect']))?['id' => $key , 'redirect' => false]:$key;
             $data .= Html::a(
-                    Icon::show($button['icon']) . $buttonText,
+                    $button['label']. $buttonText,
                     $url = $this->createUrl($button['url'], $model, $_key, $index),
                     [
                         'data-pjax' => 0,
                         'class' => $button['class'],
                         'data-action' => isset($button['data-action'])?$button['data-action']:$button['url'],
-                        'title' => $button['label'],
+//                        'title' => $button['label'],
                     ]
                 ) . ' ';
         }

@@ -109,9 +109,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 </h3>
                 <div class="tools pull-right">
                     <a href="javascript:;" class="collapse"></a>
-                    {dynagrid}
+                    '.\yii\helpers\Html::a('<i class="glyphicon glyphicon-plus"></i> '.Yii::t('app','Add New'), ['update'] , ['data-pjax'=>0, 'class' => 'btn btn-primary', 'title'=>Yii::t('app','Add') ]).' {dynagridFilter}{dynagridSort}{dynagrid}
                     <a href="javascript:;" class="remove"></a>
-                    </div>
+                </div>
                 <div class="clearfix"></div>
                 ',
             'panel' => [
@@ -126,9 +126,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ],
             'toolbar' =>  [
-                ['content'=> \yii\helpers\Html::a('<i class="glyphicon glyphicon-plus"></i> '.Yii::t('app','Add New'), ['update'] , ['data-pjax'=>0, 'class' => 'btn btn-primary', 'title'=>Yii::t('app','Add') ])],
-                ['content'=>'{dynagridFilter}{dynagridSort}'],
-                '{export}',
+//                ['content'=> ],
+//                ['content'=>''],
+//                '{export}',
             ]
         ]
     ]);
