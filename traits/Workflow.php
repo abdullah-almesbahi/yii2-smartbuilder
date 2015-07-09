@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\smartbuilder\traits;
+namespace SmartBuilder\traits;
 
 use backend\models\AuditTrail;
 use kartik\grid\GridView;

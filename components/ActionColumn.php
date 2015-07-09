@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\smartbuilder\components;
+namespace SmartBuilder\components;
 
 use Closure;
 use kartik\icons\Icon;

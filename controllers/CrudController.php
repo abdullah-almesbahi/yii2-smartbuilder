@@ -2,16 +2,16 @@
 
 namespace SmartBuilder\controllers;
 
-use backend\modules\smartbuilder\traits\Workflow;
+use SmartBuilder\traits\Workflow;
 use backend\widgets\BackendWidget;
 use backend\actions\AdjacencyFullTreeDataAction;
 use kartik\grid\GridView;
 use Ruler\RuleBuilder;
 use Yii;
-use  backend\modules\smartbuilder\models\Crud;
-use  backend\modules\smartbuilder\models\CrudSearch;
-use  backend\modules\smartbuilder\models\AF;
-use  backend\modules\smartbuilder\models\AFSearch;
+use  SmartBuilder\models\Crud;
+use  SmartBuilder\models\CrudSearch;
+use  SmartBuilder\models\AF;
+use  SmartBuilder\models\AFSearch;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
@@ -20,9 +20,9 @@ use yii\helpers\Json;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\modules\smartbuilder\widgets\image\RemoveAction;
-use backend\modules\smartbuilder\widgets\image\SaveInfoAction;
-use backend\modules\smartbuilder\widgets\image\UploadAction;
+use SmartBuilder\widgets\image\RemoveAction;
+use SmartBuilder\widgets\image\SaveInfoAction;
+use SmartBuilder\widgets\image\UploadAction;
 use backend\models\Model;
 
 
@@ -182,7 +182,7 @@ class CrudController extends Controller
         }
         $all = $this->af->getAll($where);
         $af_columns = $this->getAFColumns($all);
-        return $this->render('@app/modules/smartbuilder/views/crud/index', [
+        return $this->render('@SmartBuilder/views/crud/index', [
             'af_columns' => $af_columns,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -196,7 +196,7 @@ class CrudController extends Controller
      */
     public function actionView($id)
     {
-        return $this->render('@app/modules/smartbuilder/views/crud/view', [
+        return $this->render('@SmartBuilder/views/crud/view', [
             'model' => $this->findModel($id),
         ]);
     }
@@ -301,7 +301,7 @@ class CrudController extends Controller
                     ['like','admin_display' , 'update'],
                 ];
             }
-            return $this->render('@app/modules/smartbuilder/views/crud/update', [
+            return $this->render('@SmartBuilder/views/crud/update', [
                 'fields' => $this->af->getAll($where),
                 'model' => $model,
             ]);
@@ -392,7 +392,7 @@ class CrudController extends Controller
         $searchModel = new AFSearch(strtolower($this->table_name));
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('@app/modules/smartbuilder/views/crud/_af_index', [
+        return $this->render('@SmartBuilder/views/crud/_af_index', [
 //            'fields' => $ff,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -538,7 +538,7 @@ class CrudController extends Controller
             $tables = $model->getAllTables();
             $templates = \backend\modules\mailer\models\MailerTemplate::find()->select('id,name')->asArray()->all();
 
-            return $this->render('@app/modules/smartbuilder/views/crud/_af_update', [
+            return $this->render('@SmartBuilder/views/crud/_af_update', [
                 'model' => $model,
                 'tables' => $tables,
                 'templates' => $templates,
@@ -730,7 +730,7 @@ class CrudController extends Controller
                 $modelsRelated = $this->updateRelatedDynamic($model , $modelsRelated , $class);
             }
 
-            echo $this->renderPartial('@app/modules/smartbuilder/views/crud/related-dynamic', [
+            echo $this->renderPartial('@SmartBuilder/views/crud/related-dynamic', [
                 'dataProvider' =>  new ActiveDataProvider(['query' => $class::find()->where([$class::getDynamicPrimaryId() => $model->id])->indexBy('id')]),
                 'models' => (empty($modelsRelated)) ? [new $class()] : $modelsRelated,
                 'model' => $model,

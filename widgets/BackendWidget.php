@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\smartbuilder\widgets;
+namespace SmartBuilder\widgets;
 
 use Yii;
 use yii\helpers\Html;
@@ -12,7 +12,7 @@ class BackendWidget extends \yii\widgets\ContentDecorator
     public $header_append = '';
     public $body = '';
     public $footer = '';
-    public $viewFile = '@app/modules/smartbuilder/widgets/views/widget.php';
+    public $viewFile = '@SmartBuilder/widgets/views/widget.php';
 
     public function run()
     {

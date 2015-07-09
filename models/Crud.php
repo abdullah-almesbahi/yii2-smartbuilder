@@ -1,6 +1,6 @@
 <?php
 
-namespace  backend\modules\smartbuilder\models;
+namespace  SmartBuilder\models;
 
 use raoul2000\workflow\validation\WorkflowValidator;
 use Yii;

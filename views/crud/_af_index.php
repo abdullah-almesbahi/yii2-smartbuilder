@@ -6,7 +6,7 @@
  * @var $this \yii\web\View
  */
 
-use backend\modules\smartbuilder\components\ActionColumn;
+use SmartBuilder\components\ActionColumn;
 use kartik\dynagrid\DynaGrid;
 use kartik\grid\GridView;
 use kartik\helpers\Html;
@@ -177,7 +177,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ',
             'panel' => [
                 'heading' =>  $this->title,
-                'after' =>  \backend\modules\smartbuilder\widgets\RemoveAllButton::widget([
+                'after' =>  \SmartBuilder\widgets\RemoveAllButton::widget([
                         'url' => '/backend/user/remove-all',
                         'gridSelector' => '.grid-view',
                         'htmlOptions' => [

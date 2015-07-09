@@ -1,5 +1,5 @@
 <?php
-use backend\modules\smartbuilder\widgets\BackendWidget;
+use SmartBuilder\widgets\BackendWidget;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\base\Event;
@@ -58,7 +58,7 @@ if( Yii::$app->hasEventHandlers('backend/crud/wrapper/class') ){
 
     $workflow = false;
     $mutliTransationDisplay = false;
-    $af = (new \backend\modules\smartbuilder\models\AF($this->context->table_name));
+    $af = (new \SmartBuilder\models\AF($this->context->table_name));
     //We check here is Workflow is enabled or not
     if( $af->isWorkflowEnabled() ){
         //We will save all fields that are only for displaying and not for editing as array , so we can check by it in loop blew

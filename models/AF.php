@@ -1,6 +1,6 @@
 <?php
 
-namespace  backend\modules\smartbuilder\models;
+namespace  SmartBuilder\models;
 
 use Yii;
 use yii\base\InvalidConfigException;

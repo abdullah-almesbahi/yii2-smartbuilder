@@ -1,6 +1,6 @@
 <?php
 
-namespace  backend\modules\smartbuilder\models;
+namespace  SmartBuilder\models;
 
 use kartik\dynagrid\DynaGridStore;
 use Yii;

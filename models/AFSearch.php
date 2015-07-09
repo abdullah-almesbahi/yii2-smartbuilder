@@ -5,7 +5,7 @@
  * @license MIT http://opensource.org/licenses/MIT
  */
 
-namespace  backend\modules\smartbuilder\models;
+namespace  SmartBuilder\models;
 
 use Yii;
 use yii\base\Model;

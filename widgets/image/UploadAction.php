@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\smartbuilder\widgets\image;
+namespace SmartBuilder\widgets\image;
 
 use Yii;
 use backend\models\Image;

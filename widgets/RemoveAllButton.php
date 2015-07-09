@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\smartbuilder\widgets;
+namespace SmartBuilder\widgets;
 
 use yii\base\InvalidParamException;
 use yii\base\Widget;
